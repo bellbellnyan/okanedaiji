@@ -1,0 +1,6 @@
+<% @items.each do |item| %>
+  <%= item.title %>
+  <%= item.created_at %>
+  <%= link_to "編集", edit_item_path(item) %>
+  <%= link_to "削除", item_path(item), data: { confirm: "本当に削除してもよろしいでしょうか？" }, method: :delete %>
+<% end %>
