@@ -10,6 +10,15 @@
   </head>
 
   <body>
+    <% if flash[:error] %>
+      <%= flash[:error] %>
+      <%= @item.errors.full_messages %>
+    <% end %>
+
+    <% if flash[:notice] %>
+      <%= flash[:notice] %>
+    <% end %>
+
     <%= yield %>
   </body>
 </html>
